@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Women's Day!</title>
+<link  rel="icon" href="Mom.jpg">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        text-align: center;
+    }
+
+    h1 {
+        color: #ff3399;
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #333;
+        font-size: 1.2em;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .heart {
+        color: yellow;
+        font-size: 4em;
+        animation: heartbeat 1.5s infinite;
+        cursor: pointer;
+    }
+
+    @keyframes heartbeat {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        margin-top: 30px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Happy Women's Day! AMMA</h1>
+    <p>Celebrating the incredible women who inspire me everyday TO do the best</p>
+    <div id="heartContainer">
+        <div class="heart" id="heart">💛</div>
+    </div>
+    <div id="message" class="hidden">
+        <p>Thank you for being soppotive <b>mother</b></p>
+        <img src="Mom.jpg" alt="Woman">
+        <p>Your the best woman i never seen in my whole life</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById("heart").addEventListener("click", function() {
+        document.getElementById("message").classList.remove("hidden");
+        fadeIn(document.getElementById("message"));
+    });
+
+    function fadeIn(element) {
+        var opacity = 0;
+        var interval = setInterval(function() {
+            if (opacity < 1) {
+                opacity += 0.1;
+                element.style.opacity = opacity;
+            } else {
+                clearInterval(interval);
+            }
+        }, 100);
+    }
+</script>
+</body>
+</html>

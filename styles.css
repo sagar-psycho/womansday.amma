@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.heart {
+    color: yellow;
+    font-size: 3em;
+    cursor: pointer;
+    animation: heartbeat 1.5s infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 3em;
+}
+
+p {
+    color: #333;
+    font-size: 1.5em;
+}
